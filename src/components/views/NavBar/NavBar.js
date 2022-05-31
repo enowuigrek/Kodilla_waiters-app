@@ -9,9 +9,9 @@ const NavBar = () => {
       className='rounded'
     >
       <Container>
-        <Navbar.Brand href='#'> Waiters app </Navbar.Brand>
+        <Navbar.Brand > Waiters app </Navbar.Brand>
         <Nav>
-          <Nav.Link as={NavLink} to="/">Home</Nav.Link>
+          <NavLink to='/'> Home </NavLink>
         </Nav>
       </Container>
     </Navbar>
