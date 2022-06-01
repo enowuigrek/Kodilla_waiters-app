@@ -10,7 +10,7 @@ const NavBar = () => {
       className='rounded'
     >
       <Container>
-        <Navbar.Brand as={NavLink} to="/table/:id"> Waiters app </Navbar.Brand>
+        <Navbar.Brand > Waiters app </Navbar.Brand>
         <Nav>
           <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         </Nav>

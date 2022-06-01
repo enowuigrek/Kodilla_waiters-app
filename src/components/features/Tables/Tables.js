@@ -14,9 +14,9 @@ const Tables = () => {
     );
 
   return (
-    <div className="d-flex">
+    <div className="row">
       {tables.map((table) => (
-        <Card key={table.id} style={ { width: '20rem' } } className='m-2'>
+        <Card key={table.id} className='col-lg-4 col-md-12'>
           <Card.Body>
             <Card.Title as="h5">
               Table {table.id}
