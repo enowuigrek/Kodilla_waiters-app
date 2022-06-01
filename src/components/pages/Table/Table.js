@@ -1,8 +1,8 @@
 const Table = () => {
   return (
-    <>
-      <h2 className='text-center'>Table</h2>
-    </>
+    <h2 className='text-center m-5'>
+      Table
+    </h2>
   );
 };
 
