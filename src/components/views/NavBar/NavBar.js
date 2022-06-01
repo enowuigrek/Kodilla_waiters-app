@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Container, Navbar, NavLink, Nav } from 'react-bootstrap';
+import { Container, Navbar, Nav } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = () => {
   return (
@@ -9,9 +10,9 @@ const NavBar = () => {
       className='rounded'
     >
       <Container>
-        <Navbar.Brand > Waiters app </Navbar.Brand>
+        <Navbar.Brand as={NavLink} to="/table/:id"> Waiters app </Navbar.Brand>
         <Nav>
-          <NavLink to='/'> Home </NavLink>
+          <Nav.Link as={NavLink} to="/">Home</Nav.Link>
         </Nav>
       </Container>
     </Navbar>

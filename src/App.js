@@ -18,6 +18,6 @@ function App() {
       <Footer />
     </Container>
   );
-}
+};
 
 export default App;
