@@ -7,7 +7,6 @@ const NavBar = () => {
     <Navbar
       bg="primary"
       variant="dark"
-      className='rounded'
     >
       <Container>
         <Navbar.Brand > Waiters app </Navbar.Brand>

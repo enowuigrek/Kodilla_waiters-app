@@ -1,6 +1,6 @@
-import { Button, Card, Spinner, } from 'react-bootstrap';
+import { Button, ListGroup, Spinner, } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getAllTables } from '../../../redux/tablesRedux';
 
 const Tables = () => {
@@ -14,27 +14,42 @@ const Tables = () => {
     );
 
   return (
-    <div className="row">
-      {tables.map((table) => (
-        <Card key={table.id} className='col-lg-4 col-md-12'>
-          <Card.Body>
-            <Card.Title as="h5">
-              Table {table.id}
-            </Card.Title>
-            <Card.Text>Status: {table.status}</Card.Text>
-            <Card.Text>People: {table.peopleAmount}/{table.maxPeopleAmount}</Card.Text>
-            <Card.Text>Bill: {table.bill}</Card.Text>
-            <Button
-              // as={Link}
-              // to={`/table/${table.id}`}
-              variant='primary'
-            >
-              Update
-            </Button>
-          </Card.Body>
-         </Card>
-      ))}
-    </div>
+    <ListGroup variant='flush'>
+    {tables.map((table) => (
+      <ListGroup.Item
+        key={table.id}
+        className='py-4 d-flex justify-content-between'
+      >
+      <div className='d-flex align-items-center'>
+        <h2>
+          Table {table.id}
+        </h2>
+        <span className='vr mx-4'></span>
+        <b className='mx-2'>Status: </b>
+        <span className='text-muted'>
+          {table.status}
+        </span>
+      </div>
+      <div className='justify-content-end'>
+        <Button
+          className='mx-4'
+          as={Link}
+          to={`/table/${table.id}`}
+          variant='primary'
+        >
+          Show more
+        </Button>
+        <Button
+          as={Link}
+          to={`/table/edit/${table.id}`}
+          variant='primary'
+        >
+          Edit Table
+        </Button>
+      </div>
+      </ListGroup.Item>
+    ))}
+  </ListGroup>
   );
 };
 
